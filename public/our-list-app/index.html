@@ -10,14 +10,21 @@
 
 
 </head>
-<body>
+<body ng-app='app'>
 
-    <h1>Your app is running!</h1>
+  <h1>Your app is running!</h1>
+  <div ui-view></div>
+
 
   <!-- JS COMPONENT MODULES -->
   <script src="our-list-app/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="our-list-app/bower_components/angular/angular.min.js"></script>
+  <script src="our-list-app/bower_components/angular-route/angular-route.min.js"></script>
   <script src="our-list-app/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  
+  <!-- ANGULAR CUSTOM -->
   <script src="our-list-app/js/app.js"></script>
+  <script src="our-list-app/js/factories/apiRequest.js"></script>
+  <script src="our-list-app/js/controllers/home.js"></script>
 </body>
 </html>
