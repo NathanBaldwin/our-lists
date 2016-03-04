@@ -1,0 +1,27 @@
+{
+  "name": "our-lists",
+  "description": "Share lists with friends, family or co-workers, and collaborate in real-time.",
+  "main": "server.js",
+  "authors": [
+    "Nathan Baldwin <nathansbaldwin@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NathanBaldwin/our-lists",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
