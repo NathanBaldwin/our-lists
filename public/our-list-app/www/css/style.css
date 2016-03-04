@@ -1,0 +1,41 @@
+/* Empty. Add your own CSS if you like */
+#noteContent {
+  padding: 10px 20px 0 20px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  border-top: 1px dotted gray;
+  border-bottom: 1px dotted gray;
+  resize: none;
+  line-height: 1.4em;
+  width: 100%;
+  min-height: 250px;
+}
+
+#note-title{
+  padding: 15px 20px 0 20px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  resize: none;
+  line-height: 1em;
+  width: 100%;
+}
+
+.title-center {
+  color: #009BCF;
+  font-weight: 700;
+}
+
+.title {
+  /*color: red;*/
+ /* font-size: 1.3em;
+  font-weight: 900;*/
+}
+
+#add-note {
+  font-size: 2em;
+  height: 10px;
+  width: 10px;
+/*  border-radius: 90%;*/
+}
+
