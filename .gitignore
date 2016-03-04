@@ -35,3 +35,9 @@ node_modules
 public/our-list-app/bower_components
 public/our-list-app/node_modules
 public/our-list-app/.sass-cache
+
+ublic/our-list-app/node_modules/
+ublic/our-list-app/platforms/
+ublic/our-list-app/plugins/
+ublic/our-list-app/www/lib/
+ublic/our-list-app/www/lib
