@@ -32,4 +32,6 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-public/our-list-app/lib
+public/our-list-app/bower_components
+public/our-list-app/node_modules
+public/our-list-app/.sass-cache

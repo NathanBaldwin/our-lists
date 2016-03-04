@@ -23,6 +23,12 @@
     "express": "^4.13.4"
   },
   "devDependencies": {
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "matchdep": "^0.3.0",
     "nodemon": "^1.9.1"
   }
 }
