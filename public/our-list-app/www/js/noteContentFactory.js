@@ -1,6 +1,6 @@
 angular.module('noteContentFactory', [])
 .factory("noteContentFactory", [function () {
-
+  console.log("I see note content factory!");
   //gets all notes from local storage. If no notes exists, returns empty object:
   var getNotesObj = function() {
     return JSON.parse(localStorage.getItem("notes")) || {};
@@ -35,4 +35,5 @@ angular.module('noteContentFactory', [])
 
   };
 
-}]);//end of factory
+}]);
+//end of factory

@@ -1,10 +1,12 @@
 'use strict'
 
-const path = require('path')
 const express = require('express')
 const app = express()
+const server = require('http').createServer(app)
+const ws = require('socket.io')(server)
 const PORT = process.env.PORT || 3000
 
+const path = require('path')
 const bodyParser = require('body-parser')
 
 const routes = require('./routes/')
@@ -23,6 +25,11 @@ app.use(routes)
 
 
 //tell server to listen on specified port:
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
+})
+
+//begin socket communication with server:
+ws.on('connection', socket => {
+  console.log('socket connected', socket.id);
 })

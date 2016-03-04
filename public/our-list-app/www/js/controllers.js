@@ -1,6 +1,4 @@
-angular.module('starter.controllers', ["noteContentFactory", "angular-toArrayFilter"])
-
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+app.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -42,7 +40,8 @@ angular.module('starter.controllers', ["noteContentFactory", "angular-toArrayFil
 })
 
 
-.controller('noteListCtrl', function($scope, noteContentFactory, $state, $filter) {
+.controller('noteListCtrl', function($scope, noteContentFactory, $state, $filter, socket) {
+  console.log("loaded note list");
 
   //get all notes stored in local storage at time controller is loaded:
   $scope.noteListObject = noteContentFactory.getAllNotes();
