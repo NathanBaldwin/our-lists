@@ -32,4 +32,11 @@ server.listen(PORT, () => {
 //begin socket communication with server:
 ws.on('connection', socket => {
   console.log('socket connected', socket.id);
+
+  socket.on('createNewNote', newNote => {
+    console.log("new note:", newNote);
+    socket.broadcast.emit('receiveNote', newNote)
+  })
+
+
 })

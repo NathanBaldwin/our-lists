@@ -47,6 +47,17 @@ app.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   $scope.noteListObject = noteContentFactory.getAllNotes();
   console.log("$scope.noteListObject", $scope.noteListObject);
 
+  //when new note event is emitted from server, add to user's noteListObject:
+  socket.on('receiveNote', newNoteObj => {
+    var receivedNoteId = newNoteObj.noteId
+    console.log("NEW NOTE EVENT RECEIVED:", newNoteObj);
+    console.log("receivedNoteId", receivedNoteId);
+    $scope.noteListObject[receivedNoteId] = newNoteObj
+    console.log("ammended notes object:", $scope.noteListObject);
+    $scope.$apply()
+  })
+
+
   //create new note object with a unique id and save new note to local storage via noteContentFactory:
   $scope.addNote = function() {
     console.log("you clicked on add note!");
@@ -55,8 +66,12 @@ app.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
     $scope.noteListObject[uniqueId] =
     {
       title: "",
-      content: ""
+      content: "",
+      noteId: uniqueId
     }
+
+    //emit new note event to server
+    socket.emit('createNewNote', $scope.noteListObject[uniqueId])
 
     //creates new note object in local storage:
     localStorage.setItem("notes", JSON.stringify($scope.noteListObject));
